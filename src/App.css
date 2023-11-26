@@ -1,0 +1,55 @@
+html body{
+    background: linear-gradient(to right, #62dbbe, #143058);
+}
+form h1{
+    color: azure;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.container{
+    outline: 0;
+    border: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.login{
+    background: #23233b;
+    height: 400px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+form .center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form button{
+    width: 100%;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+    transition: background-color 0.3s ease;
+    &:hover {
+        background-color: #2980b9;
+      }
+}
+
+.login input{
+    padding: 5px;
+    margin: 5px;
+    height: 60px;
+    width: 400px;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+}
+
