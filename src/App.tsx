@@ -1,6 +1,6 @@
 //import { useState } from 'react'
 import './App.css'
-import GradientBackground from './components/GradientBackground';
+
 //import SideBar from './components/sidebar';
 import LoginForm from './components/LoginForm';
 

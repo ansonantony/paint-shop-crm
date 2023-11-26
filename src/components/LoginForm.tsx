@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 const LoginForm = () => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [showPassword, setShowPassword] = useState(false);
+  // const [showPassword, setShowPassword] = useState(false);
 
   const handleUsernameChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
     setUsername(event.target.value);
@@ -26,9 +26,9 @@ const LoginForm = () => {
     }
   };
 
-  const togglePasswordVisibility = () => {
-    setShowPassword(!showPassword);
-  };
+  // const togglePasswordVisibility = () => {
+  //   setShowPassword(!showPassword);
+  // };
 
   return (
    // <FormatPaintIcon></FormatPaintIcon>>
@@ -47,11 +47,11 @@ const LoginForm = () => {
       <div>
         <label htmlFor="password"></label>
         <input
-          type={showPassword ? 'text' : 'password'}
+          type={password ? 'text' : 'password'}
           id="password"
           placeholder='Password'
           //value={password}
-          // onChange={handlePasswordChange}
+           onChange={handlePasswordChange}
         />
         {/* {showPassword ? (
           <VisibilityOff onClick={togglePasswordVisibility} />
