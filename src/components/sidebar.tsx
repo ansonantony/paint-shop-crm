@@ -50,7 +50,7 @@ const [isOpen, setIsOpen] = useState(false);
             </Link> 
            </li>
            <li>
-             <Link to="/" className="nav-link text-white">
+             <Link to="/login" className="nav-link text-white">
                <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#grid"></use></svg>
                Products
              </Link>

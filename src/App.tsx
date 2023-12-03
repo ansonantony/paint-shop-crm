@@ -1,11 +1,9 @@
 //import { useState } from 'react'
 //import { Home } from '@mui/icons-material';
 import './App.css'
-// import SideBar from './components/sidebar';
 import Customers from './pages/Customers';
-//import SideBar from './components/sidebar';
-//import LoginForm from './pages/LoginForm';
 import HomePage from './pages/HomePage';
+import LoginForm from './pages/LoginForm';
 import Orders from './pages/Orders';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 
@@ -30,6 +28,10 @@ function App() {
       path :"/orders",
       element:<Orders/>
     },
+    {
+      path :"/login",
+      element:<LoginForm/>
+    }
   ]);
   return <>
 <RouterProvider router={router}/>
