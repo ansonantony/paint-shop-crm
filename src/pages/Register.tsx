@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+
 //import FormatPaintIcon from '@mui/icons-material/FormatPaint.js';
 //import { Visibility, VisibilityOff } from '@mui/icons-material';
 const LoginForm = () => {
@@ -32,7 +33,7 @@ const LoginForm = () => {
 
   return (
    // <FormatPaintIcon></FormatPaintIcon>>
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} action="/check" method="POST">
       <h1>Login</h1>
       <div>
         <label htmlFor="username"></label>
@@ -61,7 +62,7 @@ const LoginForm = () => {
       </div>
       <div className='center'>
       <button type="submit" className="submit btn btn-light">
-        Login
+        Register
       </button></div>
     </form>
   );
