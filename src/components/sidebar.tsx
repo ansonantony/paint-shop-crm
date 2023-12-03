@@ -1,5 +1,6 @@
 import  './sidebar.css'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function SideBar(){
   /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
@@ -33,29 +34,32 @@ const [isOpen, setIsOpen] = useState(false);
          <hr></hr>
          <ul className="nav nav-pills flex-column mb-auto">
            <li className="nav-item">
-             <a href="#" className="nav-link active" aria-current="page">
+             
+             <Link to="/home" className="nav-link active" aria-current="page">
                <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#home"></use></svg>
                Home
-             </a>
+             </Link>
            </li>
           
            <li>
-             <a href="/orders" className="nav-link text-white">
+            
+           
+            <Link to="/Orders" className="nav-link text-white">
                <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#table"></use></svg>
                Orders
-             </a>
+            </Link> 
            </li>
            <li>
-             <a href="#" className="nav-link text-white">
+             <Link to="/" className="nav-link text-white">
                <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#grid"></use></svg>
                Products
-             </a>
+             </Link>
            </li>
            <li>
-             <a href="/customers" className="nav-link text-white">
+             <Link to="/customers" className="nav-link text-white">
                <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#people-circle"></use></svg>
                Customers
-             </a>
+             </Link>
            </li>
          </ul>
          <hr></hr>
