@@ -7,24 +7,42 @@ import Customers from './pages/Customers';
 //import LoginForm from './pages/LoginForm';
 import HomePage from './pages/HomePage';
 import Orders from './pages/Orders';
-import { BrowserRouter,Routes,Route } from 'react-router-dom';
-
+import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 
 
 
 function App() {
   //const [count, setCount] = useState(0)
-
+  const router = createBrowserRouter([
+    {
+      path :"/",
+      element:<HomePage/>
+    },
+    {
+      path :"/home",
+      element:<HomePage/>
+    },
+    {
+      path :"/customers",
+      element:<Customers/>
+    },
+    {
+      path :"/orders",
+      element:<Orders/>
+    },
+  ]);
   return <>
-  <BrowserRouter>
-  <Routes>
+<RouterProvider router={router}/>
+
+  {/* <BrowserRouter>
+  <Routes> */}
     {/* <Route index element={<LoginForm/>}/> */}
-    <Route index element={<HomePage/>}/>
-    <Route path="/home" element={<HomePage/>}/>
+    {/* <Route index element={<HomePage/>}/>
+    <Route path=_{__dirname+"/home"} element={<HomePage/>}/>
     <Route path="/customers" element={<Customers/>}/>
     <Route path="/orders" element={<Orders/>}/>
   </Routes>
-  </BrowserRouter>
+  </BrowserRouter> */}
 
   {/* <SideBar/>
   <div className="container" >
