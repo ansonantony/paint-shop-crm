@@ -28,7 +28,7 @@ const [isOpen, setIsOpen] = useState(false);
        
        <div id="mySidebar" style= {{ width: isOpen ? '250px' : '0', opacity: isOpen ? '1' : '0', display: isOpen ? 'block' : 'none' }} className="d-flex sidebar flex-column flex-shrink-0 p-3 text-bg-dark">
          <a href="javascript:void(0)" className="closebtn" onClick={() => closeNav()}>&times;</a>
-         <a href="/" className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+         <a className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
            <span className="fs-4">Sidebar</span>
          </a>
          <hr></hr>
@@ -50,7 +50,7 @@ const [isOpen, setIsOpen] = useState(false);
             </Link> 
            </li>
            <li>
-             <Link to="/login" className="nav-link text-white">
+             <Link to="/products" className="nav-link text-white">
                <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#grid"></use></svg>
                Products
              </Link>

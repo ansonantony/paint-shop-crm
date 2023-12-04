@@ -1,73 +1,37 @@
-import React, { useState } from 'react';
+import { createClient } from '@supabase/supabase-js';
+import { Auth } from '@supabase/auth-ui-react';
+import {
+    // Import predefined theme
+    ThemeSupa,
+  } from '@supabase/auth-ui-shared'
+import { useNavigate } from 'react-router-dom';
 
-//import FormatPaintIcon from '@mui/icons-material/FormatPaint.js';
-//import { Visibility, VisibilityOff } from '@mui/icons-material';
-const LoginForm = () => {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  // const [showPassword, setShowPassword] = useState(false);
+const supabase = createClient("https://ifqdtmvcxwfifugamoyt.supabase.co",
+"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlmcWR0bXZjeHdmaWZ1Z2Ftb3l0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA5OTQ4MTYsImV4cCI6MjAxNjU3MDgxNn0.lKBvFyrntH6kjR3g3beIR8Ez48wZgPaiR-isSMIzmxA"
+,
+);
 
-  const handleUsernameChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
-    setUsername(event.target.value);
-  };
+export default function LoginForm(){
 
-  const handlePasswordChange = (event: { target: { value: React.SetStateAction<string>; }; }) => {
-    setPassword(event.target.value);
-  };
-
-  const handleSubmit = (event: { preventDefault: () => void; }) => {
-    event.preventDefault();
-    // Validate username and password
-    if (username && password) {
-      console.log('Username:', username);
-      console.log('Password:', password);
-      // Perform further actions like sending data to the server for authentication
-    } else {
-      alert('Please enter username and password');
-    }
-  };
-
-  // const togglePasswordVisibility = () => {
-  //   setShowPassword(!showPassword);
-  // };
-
-  return (
-   // <FormatPaintIcon></FormatPaintIcon>>
-   <div className="container"><div className="login">
-    <form onSubmit={handleSubmit} action="/check" method="POST">
-      <h1>Login</h1>
-      <div>
-        <label htmlFor="username"></label>
-        <input
-          type="text"
-          id="username"
-          value={username}
-          placeholder="Username"
-          onChange={handleUsernameChange}
-        />
-      </div>
-      <div>
-        <label htmlFor="password"></label>
-        <input
-          type={password ? 'text' : 'password'}
-          id="password"
-          placeholder='Password'
-          //value={password}
-           onChange={handlePasswordChange}
-        />
-        {/* {showPassword ? (
-          <VisibilityOff onClick={togglePasswordVisibility} />
-        ) : (
-          <Visibility onClick={togglePasswordVisibility} />
-        )} */}
-      </div>
-      <div className='center'>  
-      <button type="submit" className="submit btn btn-light">
-        Login
-      </button></div>
-    </form>
-    </div></div>
-  );
-};
-
-export default LoginForm;
+    const navigate = useNavigate();
+    supabase.auth.onAuthStateChange(async (event) =>{
+        if(event == "SIGNED_IN"){
+            //success url
+           navigate("/home");
+        } 
+    })
+    return(
+        <>
+        <div className='container App'>
+            <header className="login App-Header">
+                <Auth
+                    supabaseClient={supabase}
+                    appearance={{theme : ThemeSupa}}
+                    theme='light'
+                    providers={["google"]}
+                />
+            </header>
+        </div>
+        </>
+    );
+}
