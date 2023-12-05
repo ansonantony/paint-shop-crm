@@ -1,14 +1,14 @@
 import  './sidebar.css'
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import { createClient } from '@supabase/supabase-js';
+import { Link } from 'react-router-dom';
+//import { createClient } from '@supabase/supabase-js';
+//import { useNavigate } from 'react-router-dom';
 
 
-
-const supabase = createClient("https://ifqdtmvcxwfifugamoyt.supabase.co",
-"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlmcWR0bXZjeHdmaWZ1Z2Ftb3l0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA5OTQ4MTYsImV4cCI6MjAxNjU3MDgxNn0.lKBvFyrntH6kjR3g3beIR8Ez48wZgPaiR-isSMIzmxA"
-,
-);
+// const supabase = createClient("https://ifqdtmvcxwfifugamoyt.supabase.co",
+// "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlmcWR0bXZjeHdmaWZ1Z2Ftb3l0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA5OTQ4MTYsImV4cCI6MjAxNjU3MDgxNn0.lKBvFyrntH6kjR3g3beIR8Ez48wZgPaiR-isSMIzmxA"
+// ,
+// );
 
 function SideBar(){
   /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
@@ -20,7 +20,7 @@ function SideBar(){
 // function closeNav() {
 //   setIsOpen(false);
 // } 
-const navigate = useNavigate();
+// const navigate = useNavigate();
 
 const [isOpen, setIsOpen] = useState(false);
 
@@ -32,11 +32,11 @@ const [isOpen, setIsOpen] = useState(false);
   const closeNav = () => {
     setIsOpen(false);
   };
-  async function signOutUser() {
-    await supabase.auth.signOut();
-    navigate("/");
-    //if(error) console.log(error);
-  }
+  // async function signOutUser() {
+  //   await supabase.auth.signOut();
+  //   navigate("/");
+  //   //if(error) console.log(error);
+  // }
     return (
       
         <>
