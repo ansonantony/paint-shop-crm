@@ -79,7 +79,7 @@ const [isOpen, setIsOpen] = useState(false);
            </li>
          </ul>
          <hr></hr>
-         <button onClick={()=> signOutUser} className='logout btn btn-danger'>Log out</button>
+        
         <div className="dropdown">
           
            <a href="#" className="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
