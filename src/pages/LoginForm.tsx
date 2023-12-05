@@ -22,7 +22,7 @@ export default function LoginForm(){
     })
     return(
         <>
-        <div className='container App'>
+        <div className='containerr App'>
             <header className="login App-Header">
                 <Auth
                     supabaseClient={supabase}

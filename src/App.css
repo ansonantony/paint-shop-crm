@@ -11,13 +11,13 @@ form h1{
     font-weight: bold;
 }
 
-/* .container{
+.containerr{
     outline: 0;
     border: 0;
     width: 100%;
     min-height: 100vh;
 
-} */
+}
 .login{
     /* background: #23233b; */
     background: transparent;
