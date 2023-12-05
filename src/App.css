@@ -16,7 +16,9 @@ form h1{
     border: 0;
     width: 100%;
     min-height: 100vh;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .login{
     /* background: #23233b; */
@@ -27,6 +29,11 @@ form h1{
     align-items: center;
     justify-content: center;
     border-radius: 10px;
+}
+.center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 form .center{
     display: flex;
