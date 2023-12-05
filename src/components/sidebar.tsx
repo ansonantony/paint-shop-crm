@@ -60,7 +60,7 @@ const [isOpen, setIsOpen] = useState(false);
            <li>
             
            
-            <Link to="/Orders" className="nav-link text-white">
+            <Link to="/orders" className="nav-link text-white">
                <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#table"></use></svg>
                Orders
             </Link> 
