@@ -5,7 +5,7 @@ import {Card,Button,Form} from 'react-bootstrap';
 import {useState} from 'react';
 import { supabase } from '../pages/supabaseClient';
 
-export default function productCard(props: { product: any; }){
+export default function productCard(props :any){
     
     const product = props.product;
     const [editing,setEditing] = useState(false);
