@@ -1,10 +1,11 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import {Card,Button,Form} from 'react-bootstrap';
 import {useState} from 'react';
 import { supabase } from '../pages/supabaseClient';
 
-export default function productCard(props){
+export default function productCard(props: { product: any; }){
     
     const product = props.product;
     const [editing,setEditing] = useState(false);
