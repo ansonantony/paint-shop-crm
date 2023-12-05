@@ -7,7 +7,7 @@ import LoginForm from './pages/LoginForm';
 import Orders from './pages/Orders';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import Products from './pages/Products';
-
+import 'bootstrap/dist/css/bootstrap.css'
 
 
 function App() {

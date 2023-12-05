@@ -11,16 +11,13 @@ form h1{
     font-weight: bold;
 }
 
-.container{
+/* .container{
     outline: 0;
     border: 0;
     width: 100%;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-}
+} */
 .login{
     /* background: #23233b; */
     background: transparent;

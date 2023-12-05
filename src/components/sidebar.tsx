@@ -3,8 +3,8 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 //import { createClient } from '@supabase/supabase-js';
 //import { useNavigate } from 'react-router-dom';
-
-
+import {Navbar,Nav,Container} from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.css'
 // const supabase = createClient("https://ifqdtmvcxwfifugamoyt.supabase.co",
 // "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlmcWR0bXZjeHdmaWZ1Z2Ftb3l0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA5OTQ4MTYsImV4cCI6MjAxNjU3MDgxNn0.lKBvFyrntH6kjR3g3beIR8Ez48wZgPaiR-isSMIzmxA"
 // ,
@@ -99,7 +99,14 @@ const [isOpen, setIsOpen] = useState(false);
        <button className="openbtn" onClick={()=>openNav()}>&#9776;</button>
        </div>
        <div id="main" style={{ marginLeft: isOpen ? '250px' : '0' }}>
-       
+       <Navbar>
+            <Container>
+                <Navbar.Brand>Store Products</Navbar.Brand>
+                <Nav>
+                    <Nav.Item>Created by --</Nav.Item>
+                </Nav>
+            </Container>
+        </Navbar>
          
        </div>
        </div>  
