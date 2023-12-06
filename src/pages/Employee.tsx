@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import SideBar from "../components/sidebar";
 //import CustomerForm from "../components/CustomerForm"; 
-import ProductCard from "../components/productCard";
+import TableCardE from "../components/TableCardE";
 import {useState,useEffect} from 'react'
 import {Container,Row,Col,Form,Button,Table} from 'react-bootstrap';
 import { supabase } from './supabaseClient';
@@ -9,12 +9,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import TableCard from "../components/TableCard";
 
 //to be more secure use .env
-export default function Customers(){
+export default function Employee(){
     const [name,setName]= useState("");
     const [gender,setGender]= useState("");
     const [dob,setDob]= useState("");
+    const [salary,setSalary]= useState("");
 
-    const [customers,setCustomers]= useState([""]);
+    const [employees,setemployees]= useState([""]);
     console.log(name);
     console.log(gender);
     console.log(dob);
@@ -25,27 +26,28 @@ export default function Customers(){
     )
     async function getProducts() {
           const { data, error } = await supabase
-            .from("customers")
+            .from("employees")
             .select("*")
             .limit(10)
           if (error) throw error;
           if (data != null) {
-            setCustomers(data); // [product1,product2,product3]
+            setemployees(data); // [product1,product2,product3]
           }
         }
     async function createProducts() {
           const { data, error } = await supabase
-            .from("customers")
+            .from("employees")
             .insert({
               name:name,
               gender:gender,
               dob:dob,
+              salary:salary,
             })
             .single()
           if (error) throw error;
           window.location.reload();
         }
-        console.log(customers);
+        console.log(employees);
 
     return(
         <>
@@ -55,11 +57,11 @@ export default function Customers(){
         <Container>
             <Row>
                 <Col xs={12} md={8}>
-                    <h3>Customer Database</h3>
+                    <h3>Employee Database</h3>
                     
                     <br></br>
                     
-                    <Form.Label>Customer Name</Form.Label>
+                    <Form.Label>Employee Name</Form.Label>
                     <Form.Control
                     type="text"
                     id="name"
@@ -97,6 +99,12 @@ export default function Customers(){
                     width={100}
                     onChange={(e) => setDob(e.target.value)}
                     />
+                    <Form.Label>Salary</Form.Label>
+                    <Form.Control
+                    type="number"
+                    id="name"
+                    onChange={(e) => setSalary(e.target.value)}
+                    />
                     <br />
                     <Button onClick={()=> createProducts()}>Create Database</Button>
                 </Col>
@@ -110,12 +118,13 @@ export default function Customers(){
           <th>Name</th>
           <th>Gender</th>
           <th>DOB</th>
+          <th>Salary</th>
         </tr>
       </thead>
       <tbody>
         
-        {customers.map((product)=>(
-            <TableCard product={product}/>
+        {employees.map((product)=>(
+            <TableCardE product={product}/>
           ))}
         
         

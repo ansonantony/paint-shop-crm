@@ -6,7 +6,7 @@ import HomePage from './pages/HomePage';
 import LoginForm from './pages/LoginForm';
 import Orders from './pages/Orders';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
-import Products from './pages/Products';
+import Employee from './pages/Employee';
 import 'bootstrap/dist/css/bootstrap.css'
 import Footer from './components/Footer';
 
@@ -31,8 +31,8 @@ function App() {
       element:<Orders/>
     },
     {
-      path :"/products",
-      element:<Products/>
+      path :"/employee",
+      element:<Employee/>
     }, 
     {
       path :"/login",

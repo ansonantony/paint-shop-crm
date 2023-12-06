@@ -12,10 +12,11 @@ export default function TableCard(props :any){
     const [name,setName]= useState(product.name);
     const [gender,setGender]= useState(product.gender);
     const [age,setAge]= useState(product.age);
+    const [salary,setSalary]= useState(product.salary);
 
     async function updateProducts(){
         const { data, error } = await supabase
-            .from("customers")
+            .from("employees")
             .update({
               name:name,
               gender:gender,
@@ -27,7 +28,7 @@ export default function TableCard(props :any){
     }
     async function deleteProducts(){
         const { data, error } = await supabase
-            .from("customers")
+            .from("employees")
             .delete()
             .eq("id",product.id)
           if (error) throw error;
@@ -44,6 +45,7 @@ export default function TableCard(props :any){
           <td>{product.name}</td>
           <td>{product.gender}</td>
           <td>{product.dob}</td>
+          <td>{product.salary}</td>
           
           <td>  <Button variant='danger' onClick={()=> deleteProducts()}>Delete</Button></td>
           <td> <Button variant='secondary' onClick={() => setEditing(true)}>Edit</Button></td>
@@ -51,21 +53,21 @@ export default function TableCard(props :any){
             </>
             :
             <>
-            <Form.Label>Product Name</Form.Label>
+            <Form.Label>Employee Name</Form.Label>
                     <Form.Control
                     type="text"
                     id="name"
                     defaultValue={product.name}
                     onChange={(e) => setName(e.target.value)}
                     />
-                    <Form.Label> gender</Form.Label>
+                    <Form.Label> Gender</Form.Label>
                     <Form.Control
                     type="text"
                     id="gender"
                     defaultValue={product.gender}
                     onChange={(e) => setGender(e.target.value)}
                     />
-                    <Form.Label>age</Form.Label>
+                    <Form.Label>Age</Form.Label>
                     <br />
                     <Form.Control
                     type="date"
@@ -73,8 +75,15 @@ export default function TableCard(props :any){
                     defaultValue={product.age}
                     onChange={(e) => setAge(e.target.value)}
                     />
+                    <Form.Label>Salary</Form.Label>
+                    <Form.Control
+                    type="number"
+                    id="name"
+                    defaultValue={product.name}
+                    onChange={(e) => setSalary(e.target.value)}
+                    />
                     <br />
-                    <Button onClick={() => updateProducts()}>Update Product</Button>
+                    <Button onClick={() => updateProducts()}>Update Employee</Button>
 
             {/* <Button size='sm'  onClick={() => setEditing(false)}>Submit</Button> */}
             </>

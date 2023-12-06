@@ -72,9 +72,9 @@ const [isOpen, setIsOpen] = useState(false);
              </Link>
            </li>
            <li>
-             <Link to="/customers" className="nav-link text-white">
+             <Link to="/employee" className="nav-link text-white">
                <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#people-circle"></use></svg>
-               Customers
+               Employees
              </Link>
            </li>
          </ul>

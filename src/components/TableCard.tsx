@@ -51,21 +51,21 @@ export default function TableCard(props :any){
             </>
             :
             <>
-            <Form.Label>Product Name</Form.Label>
+            <Form.Label>Customer Name</Form.Label>
                     <Form.Control
                     type="text"
                     id="name"
                     defaultValue={product.name}
                     onChange={(e) => setName(e.target.value)}
                     />
-                    <Form.Label> gender</Form.Label>
+                    <Form.Label> Gender</Form.Label>
                     <Form.Control
                     type="text"
                     id="gender"
                     defaultValue={product.gender}
                     onChange={(e) => setGender(e.target.value)}
                     />
-                    <Form.Label>age</Form.Label>
+                    <Form.Label>Age</Form.Label>
                     <br />
                     <Form.Control
                     type="date"
@@ -74,7 +74,7 @@ export default function TableCard(props :any){
                     onChange={(e) => setAge(e.target.value)}
                     />
                     <br />
-                    <Button onClick={() => updateProducts()}>Update Product</Button>
+                    <Button onClick={() => updateProducts()}>Update Database</Button>
 
             {/* <Button size='sm'  onClick={() => setEditing(false)}>Submit</Button> */}
             </>

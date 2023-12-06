@@ -2,8 +2,10 @@ html body{
     /* background: linear-gradient(to right, #62dbbe, #143058); */
     /* background: #0f0c2d; */
     /* background: #560BAD; */
-    background: #EFF7F6;
+    /* background: #EFF7F6; */
+    background-image: url("/src/assets/bg_img.png");
     font-family: Arial, Helvetica, sans-serif;
+    color: white;
 }
 form h1{
     color: black;
@@ -11,8 +13,12 @@ form h1{
     font-size: 40px;
     font-weight: bold;
 }
+
 .page{
     min-height: 97vh;
+}
+.color{
+    box-shadow: #000;
 }
 
 .containerr{
@@ -101,6 +107,30 @@ form .submit{
     color: #777;
     font-size: 1.3rem;
     margin-bottom: 10px;
+}
+.header-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    margin-top: 100px;
+}
+.header-content h1{
+    font-size: 3rem;
+    line-height: 70px;
+    font-weight: 900;
+    /* max-width: 650px; */
+}
+.header-content h3{
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.header-content p{
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
 }
 
 .copyright-txt{
