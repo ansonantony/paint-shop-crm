@@ -11,7 +11,7 @@ export default function HomePage(){
         <div className="header-content">
             <h1>Welcome to Color Canvas<br></br></h1>
             <h3>Discover a spectrum of possibilities with our color palette.</h3>
-            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            <p>Because life is too short for boring walls..</p>
         </div>
         </div>
         </>
