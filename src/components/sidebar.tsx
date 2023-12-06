@@ -102,7 +102,7 @@ const [isOpen, setIsOpen] = useState(false);
        </div>
        <div id="main" className='fullwidth' style={{ marginLeft: isOpen ? '250px' : '0' }}>
        <Navbar >
-            <Container >
+            <Container style={{ margin: '0' }}>
                 <Navbar.Brand>Store Products</Navbar.Brand>
                 <Nav>
                     <Nav.Item>Created by --</Nav.Item>
