@@ -40,6 +40,9 @@ form .center{
     align-items: center;
     justify-content: center;
 }
+.fullwidth{
+    width:100%
+}
 form .submit{
     width: 100%;
     cursor: pointer;

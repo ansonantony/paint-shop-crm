@@ -100,9 +100,9 @@ const [isOpen, setIsOpen] = useState(false);
        <div className="openbt">
        <button className="openbtn" onClick={()=>openNav()}>&#9776;</button>
        </div>
-       <div id="main" style={{ marginLeft: isOpen ? '250px' : '0' }}>
-       <Navbar>
-            <Container>
+       <div id="main" className='fullwidth' style={{ marginLeft: isOpen ? '250px' : '0' }}>
+       <Navbar >
+            <Container >
                 <Navbar.Brand>Store Products</Navbar.Brand>
                 <Nav>
                     <Nav.Item>Created by --</Nav.Item>
