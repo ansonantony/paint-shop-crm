@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { createClient } from '@supabase/supabase-js';
 import { useNavigate } from 'react-router-dom';
-import {Navbar,Nav,Container,Button} from 'react-bootstrap';
+import {Button} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.css'
 const supabase = createClient("https://ifqdtmvcxwfifugamoyt.supabase.co",
 "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlmcWR0bXZjeHdmaWZ1Z2Ftb3l0Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDA5OTQ4MTYsImV4cCI6MjAxNjU3MDgxNn0.lKBvFyrntH6kjR3g3beIR8Ez48wZgPaiR-isSMIzmxA"
@@ -45,7 +45,7 @@ const [isOpen, setIsOpen] = useState(false);
        <div id="mySidebar" style= {{ width: isOpen ? '250px' : '0', opacity: isOpen ? '1' : '0', display: isOpen ? 'block' : 'none' }} className="d-flex sidebar flex-column flex-shrink-0 p-3 text-bg-dark">
          <a href="javascript:void(0)" className="closebtn" onClick={() => closeNav()}>&times;</a>
          <a className="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
-           <span className="fs-4">Sidebar</span>
+           <span className="fs-4 color">Color Canvas</span>
          </a>
          <hr></hr>
          <ul className="nav nav-pills flex-column mb-auto">
@@ -82,11 +82,11 @@ const [isOpen, setIsOpen] = useState(false);
         
         <div className="dropdown">
         <div className="center">
-          <Button variant='danger' onClick={()=> signOutUser()}>Log Out</Button>
+          
           </div>
            <a href="#" className="d-flex align-items-center text-white text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
              <img src="https://github.com/mdo.png" alt="" width="32" height="32" className="rounded-circle me-2"></img>
-             <strong>mdo</strong>
+             <strong>User</strong>
            </a>
            <ul className="dropdown-menu dropdown-menu-dark text-small shadow">
              <li><a className="dropdown-item" href="#">New project...</a></li>
@@ -98,17 +98,28 @@ const [isOpen, setIsOpen] = useState(false);
          </div>
        </div>
        <div className="openbt">
-       <button className="openbtn" onClick={()=>openNav()}>&#9776;</button>
+       
        </div>
        <div id="main" className='fullwidth' style={{ marginLeft: isOpen ? '250px' : '0' }}>
-       <Navbar >
+       {/* <Navbar>
             <Container style={{ margin: '0' }}>
-                <Navbar.Brand>Store Products</Navbar.Brand>
+            <Navbar.Brand><button className="openbtn" onClick={()=>openNav()}>&#9776;</button></Navbar.Brand>
+                <Navbar.Brand><img style={{height: '60px',marginLeft:'-400px'}} src='src\assets\logo.png'></img></Navbar.Brand>
                 <Nav>
-                    <Nav.Item>Created by --</Nav.Item>
+                
+                    <Nav.Item><Button style={{marginLeft: '050px'}} variant='danger' onClick={()=> signOutUser()}>Log Out</Button></Nav.Item>
                 </Nav>
             </Container>
-        </Navbar>
+        </Navbar> */}
+        <nav>
+        
+          <button className="openbtn" onClick={()=>openNav()}>&#9776;</button>
+            <h2 className='color'>Color Canvas</h2>
+
+          
+            <Button variant='danger' onClick={()=> signOutUser()}>Log Out</Button>
+            
+        </nav>
          
        </div>
        </div>  

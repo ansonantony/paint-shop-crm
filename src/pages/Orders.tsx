@@ -7,6 +7,7 @@ import {Container,Row,Col,Form,Button} from 'react-bootstrap';
 import { supabase } from './supabaseClient';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
 //to be more secure use .env
 export default function Orders(){
     const [name,setName]= useState("");
@@ -54,6 +55,7 @@ export default function Orders(){
             <Row>
                 <Col xs={12} md={8}>
                     <h3>Create Order for Database</h3>
+                    <br></br>
                     <Form.Label>Product Name</Form.Label>
                     <Form.Control
                     type="text"

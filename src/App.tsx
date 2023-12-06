@@ -8,6 +8,7 @@ import Orders from './pages/Orders';
 import { createBrowserRouter,RouterProvider } from 'react-router-dom';
 import Products from './pages/Products';
 import 'bootstrap/dist/css/bootstrap.css'
+import Footer from './components/Footer';
 
 
 function App() {
@@ -39,8 +40,10 @@ function App() {
     }
   ]);
   return <>
+  <div className='page'>
 <RouterProvider router={router}/>
-
+</div>
+<Footer/>
   {/* <BrowserRouter>
   <Routes> */}
     {/* <Route index element={<LoginForm/>}/> */}

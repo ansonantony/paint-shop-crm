@@ -56,6 +56,9 @@ export default function Customers(){
             <Row>
                 <Col xs={12} md={8}>
                     <h3>Customer Database</h3>
+                    
+                    <br></br>
+                    
                     <Form.Label>Product Name</Form.Label>
                     <Form.Control
                     type="text"
@@ -103,7 +106,7 @@ export default function Customers(){
             <Table striped bordered hover>
       <thead>
         <tr>
-          <th>#</th>
+          <th>CID</th>
           <th>Name</th>
           <th>Gender</th>
           <th>DOB</th>
