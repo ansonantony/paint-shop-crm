@@ -66,15 +66,15 @@ const [isOpen, setIsOpen] = useState(false);
             </Link> 
            </li>
            <li>
-             <Link to="/products" className="nav-link text-white">
+             <Link to="/employee" className="nav-link text-white">
                <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#grid"></use></svg>
-               Products
+               Employees
              </Link>
            </li>
            <li>
-             <Link to="/employee" className="nav-link text-white">
+             <Link to="/customers" className="nav-link text-white">
                <svg className="bi pe-none me-2" width="16" height="16"><use xlinkHref="#people-circle"></use></svg>
-               Employees
+               Customers
              </Link>
            </li>
          </ul>
